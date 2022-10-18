@@ -1,24 +1,44 @@
-<ion-menu contentId="main-content">
-  <ion-header>
-    <ion-toolbar>
-      
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">This is the menu content.</ion-content>
-</ion-menu>
-
-<div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-back-button text="back" name="arrow-back-outline"></ion-back-button>
+     </ion-buttons> 
       <ion-title>Menu</ion-title>
-    </ion-toolbar>
-    <ion-searchbar color="primary" placeholder="Buscador"></ion-searchbar>
-  </ion-header>
-  <ion-content class="ion-padding">
-  
-  </ion-content>
-</div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+      <img alt="persona" src="assets/img/2.jpg" />
+  <br>
+  <br>
+  <ion-button color="warning" [routerLink]="['/auto']">
+      <ion-icon  slot="start" name="add-outline"></ion-icon>Crear Viaje
+    </ion-button>
+    
+    <ion-button color="warning" [routerLink]="['/map']"> Viaje
+      <ion-icon slot="end" name="car-outline"></ion-icon>
+    </ion-button>
+    <br>
+    <br>
+    <img alt="duoc1" src="assets/img/7.jpg" />
+    <br>
+    <br>
+    <br>
+    <img alt="duoc2" src="assets/img/tellevoapp.JPG" />
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="mycolor">
+    <ion-button color="warning" [routerLink]="['/map']">
+      <ion-icon name="map-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="warning" slot="end">
+      <ion-button color="warning" [routerLink]="['/login']">
+        <ion-icon slot="end" name="exit"></ion-icon>
+      </ion-button>
+      <ion-button color="warning" [routerLink]="['/inicio']">
+        <ion-icon slot="end" name="person"></ion-icon>
+      </ion-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

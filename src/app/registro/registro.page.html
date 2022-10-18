@@ -1,12 +1,11 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="mycolor">
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button></ion-back-button> 
     </ion-buttons>
-    <ion-title>Registro</ion-title>
+    <ion-title>TeLlevoApp</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <ion-card>
     <ion-card-header>
@@ -20,24 +19,20 @@
         </ion-item>
         <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
-          <ion-input formControlName="password" type="password" ></ion-input>
+          <ion-input formControlName="password" type="password"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Confirmar contraseña</ion-label>
+          <ion-label position="floating">Confirmacion contraseña</ion-label>
           <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
         </ion-item>
         <br>
-        <ion-button (click)="guardar()">Registrarse
+        <ion-button color="warning" (click)="guardar()">Registrarse
         </ion-button>
+        <img alt="person" src="assets/img/3.jpg" />
       </form>
     </ion-card-content>
   </ion-card>
 </ion-content>
-
 <ion-footer>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/menu']">Registrarse</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+  <ion-toolbar color="mycolor"></ion-toolbar>
 </ion-footer>
