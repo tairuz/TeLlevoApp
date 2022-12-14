@@ -5,7 +5,7 @@ import{
   Validators,
   FormBuilder
 } from '@angular/forms';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-auto',
@@ -17,7 +17,8 @@ export class AutoPage implements OnInit {
   formularioViaje: FormGroup;
 
   constructor(public fb: FormBuilder,
-    public alertController: AlertController) {
+    public alertController: AlertController,
+    public navCtrl: NavController) {
 
     this.formularioViaje = this.fb.group({
       'destino': new FormControl("",Validators.required),
@@ -50,5 +51,6 @@ export class AutoPage implements OnInit {
     }
 
     localStorage.setItem('viaje',JSON.stringify(viaje));
+    this.navCtrl.navigateRoot('mensaje');
   }
 }

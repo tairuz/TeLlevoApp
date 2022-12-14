@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'uno',
     pathMatch: 'full'
   },
   {
@@ -33,6 +33,18 @@ const routes: Routes = [
   {
     path: 'map',
     loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
+  },
+  {
+    path: 'uno',
+    loadChildren: () => import('./uno/uno.module').then( m => m.UnoPageModule)
+  },
+  {
+    path: 'mensaje',
+    loadChildren: () => import('./mensaje/mensaje.module').then( m => m.MensajePageModule)
+  },
+  {
+    path: 'viaje',
+    loadChildren: () => import('./viaje/viaje.module').then( m => m.ViajePageModule)
   },
 ];
 
